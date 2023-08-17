@@ -1,4 +1,10 @@
 {
+  "name": "dispose",
+  "description": "Utility and features for creating and managing disposable object.",
+  "version": "0.0.1",
+  "author": "integer11",
+  "license": "MIT",
+  "status": "unstable",
   "lint": {
     "rules": {
       "tags": [
