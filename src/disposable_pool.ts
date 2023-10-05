@@ -1,7 +1,7 @@
 /**
  * Contains the class DisposablePool.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { AbstractDisposable } from './abstract_disposable.ts';

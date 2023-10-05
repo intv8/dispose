@@ -1,7 +1,7 @@
 /**
  * This file contains tests for the DisposablePool feature.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { assert, assertEquals, describe, it } from '../dev_deps.ts';

@@ -4,7 +4,7 @@
  *
  * For use in ../disposable_pool.test.ts.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { IDisposable } from '../../deps.ts';

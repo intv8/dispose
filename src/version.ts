@@ -1,11 +1,11 @@
 /**
- * This file exports the current release version of the partic11e dispose
+ * This file exports the current release version of the intv8 dispose
  * package.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 /**
- * The current release version of the partic11e dispose package.
+ * The current release version of the intv8 dispose package.
  */
 export const VERSION = '0.0.1';

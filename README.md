@@ -1,14 +1,14 @@
 <p align="center">
 <!-- Update log -->
-<img alt="partic11e logo" height="70" src="https://raw.githubusercontent.com/partic11e/.github/main/profile/img/logotype.svg" />
+<img alt="intv8 logo" height="70" src="https://raw.githubusercontent.com/intv8/.github/main/profile/img/clr/banner.svg" />
 <strong>dispose</strong>
 </p>
 
 <p align="center">
-partic11e is a collection of easy-to-use utility and feature libraries for creating anything you want with the <a href="https://deno.land">Deno</a> runtime.
+intv8 is a collection of easy-to-use utility and feature libraries for creating anything you want with the <a href="https://deno.land">Deno</a> runtime.
 </p>
 
-<h1 align="center">partic11e - dispose</h1>
+<h1 align="center">intv8 - dispose</h1>
 
 <p align="center">
 Utility and features for creating and managing disposable object.
@@ -19,21 +19,21 @@ Utility and features for creating and managing disposable object.
 </p>
 
 <p align="center">
-<sub>Built with ❤ by integer11 and <a href="https://github.com/partic11e/dispose/graphs/contributors">contributors</a></sub>
+<sub>Built with ❤ by integereleven and <a href="https://github.com/intv8/dispose/graphs/contributors">contributors</a></sub>
 </p>
 
 <p align="center">
-<a href="https://github.com/partic11e/dispose/blob/main/CODE_OF_CONDUCT.md">
+<a href="https://github.com/intv8/dispose/blob/main/CODE_OF_CONDUCT.md">
   <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat-square" />
 </a>
-<a href="https://github.com/partic11e/dispose/commits">
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/partic11e/dispose?style=flat-square">
+<a href="https://github.com/intv8/dispose/commits">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/intv8/dispose?style=flat-square">
 </a>
-<a href="https://github.com/partic11e/dispose/releases">
-  <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/partic11e/dispose?style=flat-square" />
+<a href="https://github.com/intv8/dispose/releases">
+  <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/intv8/dispose?style=flat-square" />
 </a>
-<a href="https://github.com/partic11e/dispose/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/partic11e/dispose?style=flat-square">
+<a href="https://github.com/intv8/dispose/issues">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/intv8/dispose?style=flat-square">
 </a>
 </p>
 
@@ -59,7 +59,7 @@ To install, you simply need to re-export the library features with your `./deps.
 
 ```ts
 // ./deps.ts
-export * from 'https://denopkg.com/partic11e/dispose/mod.ts';
+export * from 'https://denopkg.com/intv8/dispose/mod.ts';
 //  or specific features
 ```
 
@@ -76,19 +76,19 @@ You can specify a specific branch or release to re-export:
 **Export from a specific branch**
 
 ```ts
-export * from 'https://denopkg.com/partic11e/dispose@dev-fix-06145/mod.ts';
+export * from 'https://denopkg.com/intv8/dispose@dev-fix-06145/mod.ts';
 ```
 
 **Export from a specific release**
 
 ```ts
-export * from 'https://denopkg.com/partic11e/dispose@0.1.0-alpha/mod.ts';
+export * from 'https://denopkg.com/intv8/dispose@0.1.0-alpha/mod.ts';
 ```
 
 **Export the latest release**
 
 ```ts
-export * from 'https://denopkg.com/partic11e/dispose@latest/mod.ts';
+export * from 'https://denopkg.com/intv8/dispose@latest/mod.ts';
 ```
 
 > **Note:** If no branch or tag is specified in the re-export, then it will pull from the main branch, which we only merge into when preparing a release.\
@@ -113,19 +113,18 @@ Contributions are welcome! Take a look at our [contributing guidelines][contribu
 
 [(to top)](#table-of-contents)
 
-The MIT License (MIT) 2022 integer11. Refer to [LICENSE][license] for details.
+The MIT License (MIT) 2022 integereleven. Refer to [LICENSE][license] for details.
 
 <p align="center">
 <img
-  alt="partic11e logo"
+  alt="intv8 logo"
   height="24"
-  src="https://raw.githubusercontent.com/i11n/.github/main/profile/img/logotype.svg"
+  src="https://raw.githubusercontent.com/i11n/.github/main/profile/img/frm/logo-open-source.svg"
 />
-<sub>open source</sub>
 </p>
 
 [deno]: https://deno.land "Deno homepage"
-[branches]: https://github.com/partic11e/dispose/branches "partic11e/dispose branches on GitHub"
-[releases]: https://github.com/partic11e/dispose/releases "partic11e/dispose releases on GitHub"
-[contributing]: https://github.com/partic11e/dispose/blob/main/CONTRIBUTING.md "partic11e/dispose contributing guidelines"
-[license]: https://github.com/partic11e/dispose/blob/main/LICENSE "partic11e/dispose license"
+[branches]: https://github.com/intv8/dispose/branches "intv8/dispose branches on GitHub"
+[releases]: https://github.com/intv8/dispose/releases "intv8/dispose releases on GitHub"
+[contributing]: https://github.com/intv8/dispose/blob/main/CONTRIBUTING.md "intv8/dispose contributing guidelines"
+[license]: https://github.com/intv8/dispose/blob/main/LICENSE "intv8/dispose license"

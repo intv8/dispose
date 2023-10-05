@@ -1,7 +1,7 @@
 /**
  * This file exports the assertNotDisposed function.
  *
- * @copyright 2022 integer11. All rights reserved. MIT license.
+ * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
 import { ObjectDisposedException } from './exceptions/object_disposed_exception.ts';
