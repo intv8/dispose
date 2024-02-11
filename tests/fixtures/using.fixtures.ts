@@ -7,7 +7,7 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { IDisposable } from '../../deps.ts';
+import { IDisposable } from '../../mod.ts';
 
 export class A implements IDisposable {
   name = 'A';

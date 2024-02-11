@@ -6,7 +6,7 @@
 
 import { dispose } from './dispose.ts';
 
-import type { IDisposable } from '../deps.ts';
+import type { IDisposable } from './types/interfaces.ts';
 
 /** Performs a `callback` function with the provided `disposable` disposing the `disposable` on completion, returning any exceptions that may have occured during disposal. */
 export function using<T extends IDisposable, R>(

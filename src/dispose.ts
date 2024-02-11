@@ -4,11 +4,10 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-//  Import disposeInternal
 import { disposeInternal } from './_internals/mod.ts';
 
-//  Import types
-import type { Exception, IDisposable } from '../deps.ts';
+import type { Exception } from '../deps.ts';
+import type { IDisposable } from './types/interfaces.ts';
 
 /** Disposes an array of {@link IDisposable} objects returning any exceptions that may have occrred during disposal. */
 export function dispose(

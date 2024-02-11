@@ -4,7 +4,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-//  Import base exception
 import { type BaseExceptionInit, InvalidException } from '../../deps.ts';
 
 /** The default message for the {@link ObjectDisposedException} exception. */
@@ -38,7 +37,6 @@ export class ObjectDisposedException<
   /** Creates a new {@link ObjectDisposedException} exception with the provided message, optionally with additional {@link ObjectDisposedExceptionInit} properties. */
   constructor(message: string, init?: T);
 
-  //  Constructor overload implementation
   //  deno-lint-ignore default-param-last
   constructor(msgOrInit: string | T = DEFAULT_MESSAGE, maybeInit?: T) {
     let message: string = msgOrInit as string;

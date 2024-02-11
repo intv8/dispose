@@ -6,7 +6,7 @@
 
 import { assertNotDisposed } from './assert_not_disposed.ts';
 
-import type { IDisposable } from '../deps.ts';
+import type { IDisposable } from './types/interfaces.ts';
 
 /** An abstract class implementation of the {@link IDisposable} interface. */
 export abstract class AbstractDisposable implements IDisposable {

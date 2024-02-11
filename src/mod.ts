@@ -6,6 +6,8 @@
 
 export * from './exceptions/mod.ts';
 
+export * from './types/mod.ts';
+
 export { VERSION } from './version.ts';
 
 export { dispose } from './dispose.ts';

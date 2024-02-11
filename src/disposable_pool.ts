@@ -7,7 +7,7 @@
 import { AbstractDisposable } from './abstract_disposable.ts';
 import { dispose } from './dispose.ts';
 
-import type { IDisposable } from '../deps.ts';
+import type { IDisposable } from './types/interfaces.ts';
 
 /** A class for collecting independant {@link IDisposable} objects into a single {@link DisposablePool}. */
 export class DisposablePool<T extends { [key: string]: IDisposable }>

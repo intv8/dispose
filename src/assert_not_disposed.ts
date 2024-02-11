@@ -6,7 +6,7 @@
 
 import { ObjectDisposedException } from './exceptions/object_disposed_exception.ts';
 
-import type { IDisposable } from '../deps.ts';
+import type { IDisposable } from './types/interfaces.ts';
 
 /** Asserts that the specified object is not disposed, optionally with a specific `message`. */
 export function assertNotDisposed(

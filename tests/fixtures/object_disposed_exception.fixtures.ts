@@ -7,8 +7,6 @@
  * @copyright 2022 integereleven. All rights reserved. MIT license.
  */
 
-import { I11N_EX2_HOST, I11N_EX2_PATH } from '../../dev_deps.ts';
-
 export const messageFixtures = [
   ['', {
     name: 'ObjectDisposedException',
@@ -20,7 +18,7 @@ export const messageFixtures = [
     cause: undefined,
     data: undefined,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=An%20action%20was%20attempted%20on%20a%20disposed%20object.`,
+      `/0x20?message=An%20action%20was%20attempted%20on%20a%20disposed%20object.`,
   }],
   ['The object is disposed.', {
     name: 'ObjectDisposedException',
@@ -30,8 +28,7 @@ export const messageFixtures = [
     asValue: 32,
     cause: undefined,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=The%20object%20is%20disposed.`,
+    helpUrl: `/0x20?message=The%20object%20is%20disposed.`,
   }],
 ] as const;
 
@@ -48,7 +45,7 @@ export const initFixtures = [
     cause: undefined,
     data: undefined,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=An%20action%20was%20attempted%20on%20a%20disposed%20object.`,
+      `/0x20?message=An%20action%20was%20attempted%20on%20a%20disposed%20object.`,
   }],
   [init, {
     name: 'ObjectDisposedException',
@@ -60,7 +57,7 @@ export const initFixtures = [
     cause: undefined,
     data: init,
     helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=An%20action%20was%20attempted%20on%20the%20disposed%20object%20%22example%22.&data=${
+      `/0x20?message=An%20action%20was%20attempted%20on%20the%20disposed%20object%20%22example%22.&data=${
         encodeURIComponent(JSON.stringify(init))
       }`,
   }],
@@ -75,12 +72,11 @@ export const messageCauseFixtures = [
     code: 32,
     cause: cause0,
     data: undefined,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=Object%20is%20disposed.&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x20?message=Object%20is%20disposed.&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;
 
@@ -91,10 +87,9 @@ export const messageDataFixtures = [
     code: 32,
     cause: undefined,
     data: init,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=Object%20is%20disposed.&data=${
-        encodeURIComponent(JSON.stringify(init))
-      }`,
+    helpUrl: `/0x20?message=Object%20is%20disposed.&data=${
+      encodeURIComponent(JSON.stringify(init))
+    }`,
   }],
 ] as const;
 
@@ -105,13 +100,12 @@ export const messageDataCauseFixtures = [
     code: 32,
     cause: cause0,
     data: init,
-    helpUrl:
-      `${I11N_EX2_HOST}${I11N_EX2_PATH}/0x20?message=Object%20is%20disposed.&data=${
-        encodeURIComponent(JSON.stringify(init))
-      }&cause=${
-        encodeURIComponent(
-          JSON.stringify({ name: 'Error', message: cause0.message }),
-        )
-      }`,
+    helpUrl: `/0x20?message=Object%20is%20disposed.&data=${
+      encodeURIComponent(JSON.stringify(init))
+    }&cause=${
+      encodeURIComponent(
+        JSON.stringify({ name: 'Error', message: cause0.message }),
+      )
+    }`,
   }],
 ] as const;

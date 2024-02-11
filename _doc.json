@@ -1,206 +1,427 @@
 [
   {
     "kind": "function",
-    "name": "using",
+    "name": "dispose",
     "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/using.ts",
-      "line": 12,
+      "filename": "file:///C:/repos/intv8/dispose/src/dispose.ts",
+      "line": 13,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "Performs a `callback` function with the provided `disposable` disposing the `disposable` on completion, returning any exceptions that may have occured during disposal."
+      "doc": "Disposes an array of {@link IDisposable} objects returning any exceptions that may have occrred during disposal."
     },
     "functionDef": {
       "params": [
         {
-          "kind": "identifier",
-          "name": "disposable",
-          "optional": false,
-          "tsType": {
-            "repr": "T",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "T"
-            }
-          }
-        },
-        {
-          "kind": "identifier",
-          "name": "callback",
-          "optional": false,
+          "kind": "rest",
+          "arg": {
+            "kind": "identifier",
+            "name": "disposables",
+            "optional": false,
+            "tsType": null
+          },
           "tsType": {
             "repr": "",
-            "kind": "fnOrConstructor",
-            "fnOrConstructor": {
-              "constructor": false,
-              "tsType": {
-                "repr": "R",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "R"
-                }
-              },
-              "params": [
-                {
-                  "kind": "identifier",
-                  "name": "disposable",
-                  "optional": false,
-                  "tsType": {
-                    "repr": "T",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "T"
-                    }
-                  }
-                }
-              ],
-              "typeParams": []
+            "kind": "array",
+            "array": {
+              "repr": "IDisposable",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "IDisposable"
+              }
             }
           }
         }
       ],
       "returnType": {
-        "repr": "R",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": null,
-          "typeName": "R"
-        }
+        "repr": "",
+        "kind": "union",
+        "union": [
+          {
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "",
+              "kind": "parenthesized",
+              "parenthesized": {
+                "repr": "",
+                "kind": "union",
+                "union": [
+                  {
+                    "repr": "Error",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "Error"
+                    }
+                  },
+                  {
+                    "repr": "Exception",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "Exception"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "repr": "undefined",
+            "kind": "keyword",
+            "keyword": "undefined"
+          }
+        ]
       },
       "hasBody": true,
       "isAsync": false,
       "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "ObjectDisposedException",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+      "line": 28,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "An exception raised when an attempt is made to access resources of a disposed object."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link ObjectDisposedException} exception with the default message and no exception init properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 32,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link ObjectDisposedException} exception with a message created from the provided {@link ObjectDisposedExceptionInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 35,
+            "col": 2
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates a new {@link ObjectDisposedException} exception with the provided message, optionally with additional {@link ObjectDisposedExceptionInit} properties."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "init",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 38,
+            "col": 2
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "msgOrInit",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            },
+            {
+              "kind": "identifier",
+              "name": "maybeInit",
+              "optional": true,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 41,
+            "col": 2
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The exception code for the {@link ObjectDisposedException} exception."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 54,
+            "col": 2
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "InvalidException",
+      "implements": [],
       "typeParams": [
         {
           "name": "T",
           "constraint": {
-            "repr": "IDisposable",
+            "repr": "ObjectDisposedExceptionInit",
             "kind": "typeRef",
             "typeRef": {
               "typeParams": null,
-              "typeName": "IDisposable"
+              "typeName": "ObjectDisposedExceptionInit"
+            }
+          },
+          "default": {
+            "repr": "ObjectDisposedExceptionInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ObjectDisposedExceptionInit"
             }
           }
-        },
+        }
+      ],
+      "superTypeParams": [
         {
-          "name": "R"
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
         }
       ]
     }
   },
   {
-    "kind": "function",
-    "name": "usingAsync",
+    "kind": "typeAlias",
+    "name": "ObjectDisposedExceptionInit",
     "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/using.ts",
-      "line": 24,
+      "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
+      "line": 13,
       "col": 0
     },
     "declarationKind": "export",
     "jsDoc": {
-      "doc": "Asynchronously performs a `callback` function with the provided `disposable` disposing the `disposable` on completion, returning any exceptions that may have occured during disposal."
+      "doc": "The exception init properties for the {@link ObjectDisposedException} exception."
     },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "disposable",
-          "optional": false,
-          "tsType": {
-            "repr": "T",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "T"
-            }
-          }
-        },
-        {
-          "kind": "identifier",
-          "name": "callback",
-          "optional": false,
-          "tsType": {
-            "repr": "",
-            "kind": "fnOrConstructor",
-            "fnOrConstructor": {
-              "constructor": false,
-              "tsType": {
-                "repr": "Promise",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": [
-                    {
-                      "repr": "R",
-                      "kind": "typeRef",
-                      "typeRef": {
-                        "typeParams": null,
-                        "typeName": "R"
-                      }
-                    }
-                  ],
-                  "typeName": "Promise"
-                }
-              },
-              "params": [
-                {
-                  "kind": "identifier",
-                  "name": "disposable",
-                  "optional": false,
-                  "tsType": {
-                    "repr": "T",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "T"
-                    }
-                  }
-                }
-              ],
-              "typeParams": []
-            }
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "Promise",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionInit",
         "kind": "typeRef",
         "typeRef": {
           "typeParams": [
             {
-              "repr": "R",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": null,
-                "typeName": "R"
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "objectName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
               }
             }
           ],
-          "typeName": "Promise"
+          "typeName": "BaseExceptionInit"
         }
       },
-      "hasBody": true,
-      "isAsync": true,
-      "isGenerator": false,
-      "typeParams": [
-        {
-          "name": "T",
-          "constraint": {
-            "repr": "IDisposable",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "IDisposable"
-            }
-          }
-        },
-        {
-          "name": "R"
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "VERSION",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/version.ts",
+      "line": 11,
+      "col": 13
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The current release version of the intv8 dispose package."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.1",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.1"
         }
-      ]
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "interface",
+    "name": "IDisposable",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/types/interfaces.ts",
+      "line": 11,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Provides a mechanism to dispose of resources associated with the current class."
+    },
+    "interfaceDef": {
+      "extends": [],
+      "methods": [
+        {
+          "name": "dispose",
+          "kind": "method",
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/types/interfaces.ts",
+            "line": 13,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "Dispose of resources associated with the current instance."
+          },
+          "optional": false,
+          "params": [],
+          "returnType": {
+            "repr": "void",
+            "kind": "keyword",
+            "keyword": "void"
+          },
+          "typeParams": []
+        }
+      ],
+      "properties": [
+        {
+          "name": "isDisposed",
+          "location": {
+            "filename": "file:///C:/repos/intv8/dispose/src/types/interfaces.ts",
+            "line": 16,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "A value indicating whether the current instance has been disposed."
+          },
+          "params": [],
+          "computed": false,
+          "optional": false,
+          "tsType": {
+            "repr": "boolean",
+            "kind": "keyword",
+            "keyword": "boolean"
+          },
+          "typeParams": []
+        }
+      ],
+      "callSignatures": [],
+      "indexSignatures": [],
+      "typeParams": []
     }
   },
   {
@@ -460,6 +681,259 @@
       ],
       "typeParams": [],
       "superTypeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "assertNotDisposed",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/assert_not_disposed.ts",
+      "line": 12,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Asserts that the specified object is not disposed, optionally with a specific `message`."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "message",
+          "optional": true,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "void",
+        "kind": "keyword",
+        "keyword": "void"
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "using",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/using.ts",
+      "line": 12,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Performs a `callback` function with the provided `disposable` disposing the `disposable` on completion, returning any exceptions that may have occured during disposal."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "T",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "T"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "callback",
+          "optional": false,
+          "tsType": {
+            "repr": "",
+            "kind": "fnOrConstructor",
+            "fnOrConstructor": {
+              "constructor": false,
+              "tsType": {
+                "repr": "R",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "R"
+                }
+              },
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "disposable",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "T",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "T"
+                    }
+                  }
+                }
+              ],
+              "typeParams": []
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "R",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "R"
+        }
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "name": "R"
+        }
+      ]
+    }
+  },
+  {
+    "kind": "function",
+    "name": "usingAsync",
+    "location": {
+      "filename": "file:///C:/repos/intv8/dispose/src/using.ts",
+      "line": 24,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Asynchronously performs a `callback` function with the provided `disposable` disposing the `disposable` on completion, returning any exceptions that may have occured during disposal."
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "T",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "T"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "callback",
+          "optional": false,
+          "tsType": {
+            "repr": "",
+            "kind": "fnOrConstructor",
+            "fnOrConstructor": {
+              "constructor": false,
+              "tsType": {
+                "repr": "Promise",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "R",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "R"
+                      }
+                    }
+                  ],
+                  "typeName": "Promise"
+                }
+              },
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "disposable",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "T",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "T"
+                    }
+                  }
+                }
+              ],
+              "typeParams": []
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "R",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "R"
+              }
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "name": "R"
+        }
+      ]
     }
   },
   {
@@ -820,417 +1294,6 @@
         }
       ],
       "superTypeParams": []
-    }
-  },
-  {
-    "kind": "variable",
-    "name": "VERSION",
-    "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/version.ts",
-      "line": 11,
-      "col": 13
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The current release version of the intv8 dispose package."
-    },
-    "variableDef": {
-      "tsType": {
-        "repr": "0.0.1",
-        "kind": "literal",
-        "literal": {
-          "kind": "string",
-          "string": "0.0.1"
-        }
-      },
-      "kind": "const"
-    }
-  },
-  {
-    "kind": "function",
-    "name": "assertNotDisposed",
-    "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/assert_not_disposed.ts",
-      "line": 12,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Asserts that the specified object is not disposed, optionally with a specific `message`."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "identifier",
-          "name": "disposable",
-          "optional": false,
-          "tsType": {
-            "repr": "IDisposable",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "IDisposable"
-            }
-          }
-        },
-        {
-          "kind": "identifier",
-          "name": "message",
-          "optional": true,
-          "tsType": {
-            "repr": "string",
-            "kind": "keyword",
-            "keyword": "string"
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "void",
-        "kind": "keyword",
-        "keyword": "void"
-      },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "class",
-    "name": "ObjectDisposedException",
-    "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-      "line": 29,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "An exception raised when an attempt is made to access resources of a disposed object."
-    },
-    "classDef": {
-      "isAbstract": false,
-      "constructors": [
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link ObjectDisposedException} exception with the default message and no exception init properties."
-          },
-          "accessibility": null,
-          "name": "constructor",
-          "params": [],
-          "location": {
-            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-            "line": 33,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link ObjectDisposedException} exception with a message created from the provided {@link ObjectDisposedExceptionInit} properties."
-          },
-          "accessibility": null,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "init",
-              "optional": false,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-            "line": 36,
-            "col": 2
-          }
-        },
-        {
-          "jsDoc": {
-            "doc": "Creates a new {@link ObjectDisposedException} exception with the provided message, optionally with additional {@link ObjectDisposedExceptionInit} properties."
-          },
-          "accessibility": null,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "identifier",
-              "name": "message",
-              "optional": false,
-              "tsType": {
-                "repr": "string",
-                "kind": "keyword",
-                "keyword": "string"
-              }
-            },
-            {
-              "kind": "identifier",
-              "name": "init",
-              "optional": true,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-            "line": 39,
-            "col": 2
-          }
-        },
-        {
-          "accessibility": null,
-          "hasBody": true,
-          "name": "constructor",
-          "params": [
-            {
-              "kind": "assign",
-              "left": {
-                "kind": "identifier",
-                "name": "msgOrInit",
-                "optional": false,
-                "tsType": {
-                  "repr": "",
-                  "kind": "union",
-                  "union": [
-                    {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    {
-                      "repr": "T",
-                      "kind": "typeRef",
-                      "typeRef": {
-                        "typeParams": null,
-                        "typeName": "T"
-                      }
-                    }
-                  ]
-                }
-              },
-              "right": "[UNSUPPORTED]",
-              "tsType": null
-            },
-            {
-              "kind": "identifier",
-              "name": "maybeInit",
-              "optional": true,
-              "tsType": {
-                "repr": "T",
-                "kind": "typeRef",
-                "typeRef": {
-                  "typeParams": null,
-                  "typeName": "T"
-                }
-              }
-            }
-          ],
-          "location": {
-            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-            "line": 43,
-            "col": 2
-          }
-        }
-      ],
-      "properties": [
-        {
-          "jsDoc": {
-            "doc": "The exception code for the {@link ObjectDisposedException} exception."
-          },
-          "tsType": {
-            "repr": "number",
-            "kind": "keyword",
-            "keyword": "number"
-          },
-          "readonly": false,
-          "accessibility": "public",
-          "optional": false,
-          "isAbstract": false,
-          "isStatic": false,
-          "name": "code",
-          "location": {
-            "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-            "line": 56,
-            "col": 2
-          }
-        }
-      ],
-      "indexSignatures": [],
-      "methods": [],
-      "extends": "InvalidException",
-      "implements": [],
-      "typeParams": [
-        {
-          "name": "T",
-          "constraint": {
-            "repr": "ObjectDisposedExceptionInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "ObjectDisposedExceptionInit"
-            }
-          },
-          "default": {
-            "repr": "ObjectDisposedExceptionInit",
-            "kind": "typeRef",
-            "typeRef": {
-              "typeParams": null,
-              "typeName": "ObjectDisposedExceptionInit"
-            }
-          }
-        }
-      ],
-      "superTypeParams": [
-        {
-          "repr": "T",
-          "kind": "typeRef",
-          "typeRef": {
-            "typeParams": null,
-            "typeName": "T"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "kind": "typeAlias",
-    "name": "ObjectDisposedExceptionInit",
-    "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/exceptions/object_disposed_exception.ts",
-      "line": 14,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "The exception init properties for the {@link ObjectDisposedException} exception."
-    },
-    "typeAliasDef": {
-      "tsType": {
-        "repr": "BaseExceptionInit",
-        "kind": "typeRef",
-        "typeRef": {
-          "typeParams": [
-            {
-              "repr": "",
-              "kind": "typeLiteral",
-              "typeLiteral": {
-                "methods": [],
-                "properties": [
-                  {
-                    "name": "objectName",
-                    "params": [],
-                    "computed": false,
-                    "optional": true,
-                    "tsType": {
-                      "repr": "string",
-                      "kind": "keyword",
-                      "keyword": "string"
-                    },
-                    "typeParams": []
-                  }
-                ],
-                "callSignatures": [],
-                "indexSignatures": []
-              }
-            }
-          ],
-          "typeName": "BaseExceptionInit"
-        }
-      },
-      "typeParams": []
-    }
-  },
-  {
-    "kind": "function",
-    "name": "dispose",
-    "location": {
-      "filename": "file:///C:/repos/intv8/dispose/src/dispose.ts",
-      "line": 14,
-      "col": 0
-    },
-    "declarationKind": "export",
-    "jsDoc": {
-      "doc": "Disposes an array of {@link IDisposable} objects returning any exceptions that may have occrred during disposal."
-    },
-    "functionDef": {
-      "params": [
-        {
-          "kind": "rest",
-          "arg": {
-            "kind": "identifier",
-            "name": "disposables",
-            "optional": false,
-            "tsType": null
-          },
-          "tsType": {
-            "repr": "",
-            "kind": "array",
-            "array": {
-              "repr": "IDisposable",
-              "kind": "typeRef",
-              "typeRef": {
-                "typeParams": null,
-                "typeName": "IDisposable"
-              }
-            }
-          }
-        }
-      ],
-      "returnType": {
-        "repr": "",
-        "kind": "union",
-        "union": [
-          {
-            "repr": "",
-            "kind": "array",
-            "array": {
-              "repr": "",
-              "kind": "parenthesized",
-              "parenthesized": {
-                "repr": "",
-                "kind": "union",
-                "union": [
-                  {
-                    "repr": "Error",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "Error"
-                    }
-                  },
-                  {
-                    "repr": "Exception",
-                    "kind": "typeRef",
-                    "typeRef": {
-                      "typeParams": null,
-                      "typeName": "Exception"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "repr": "undefined",
-            "kind": "keyword",
-            "keyword": "undefined"
-          }
-        ]
-      },
-      "hasBody": true,
-      "isAsync": false,
-      "isGenerator": false,
-      "typeParams": []
     }
   }
 ]
